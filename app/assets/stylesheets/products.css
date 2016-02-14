@@ -2,3 +2,151 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+body {
+  font-family: 'Open Sans', sans-serif;
+  height:100%;
+  width:100%;
+}
+
+h2 {
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+font-size: 40px;
+color: #34e7ff;
+}
+
+h3 {
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+font-size: 25px;
+color: #34e7ff;
+}
+
+
+li {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #000;
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+.product_name {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 22px;
+  list-style: none;
+}
+
+.product_price {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  list-style: none;
+}
+
+.button_blue a {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #34e7ff;
+  border: none;
+  color: #000;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 0;
+}
+
+
+h1 {
+  color: #34e7ff;
+}
+
+header, footer p {
+  font
+  display: block;
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+header, footer {
+  display: block;
+  padding: 50px;
+  background: #eeeeee; /*light gray*/
+  min-height: 100px;
+  background: #000000;
+}
+
+
+article {
+  padding: 50px;
+  background: #34e7ff; /*blue*/
+}
+
+.products-block {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product_single_box {
+  margin: 10px;
+  width:200px;
+  height: 300px;
+  background: #ededed;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+}
+
+
+.links li {
+margin: auto;
+display: inline-block;
+float: right;
+padding-right: 20px;
+}
+
+.footer_menu {
+display: inline-block;
+width: auto;
+}
+
+
+/*Media Stuff Don't Touch Please :) */
+
+@media all and (max-width: 640px) {
+
+  #main, #page {
+    flex-flow: column;
+  }
+
+  #main > article, #main > nav, #main > aside {
+    order: 0;
+  }
+
+  #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+  }
+}
