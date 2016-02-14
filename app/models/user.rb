@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :reviews, through: :products 
+  #has_many :reviews
+  has_one :review, through: :products #added for reviews
 end
