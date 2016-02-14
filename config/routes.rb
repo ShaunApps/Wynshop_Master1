@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   get 'admin' => 'products#admin'
-  get 'contact' => 'products#contact'
+  get 'contact' => 'contact#contact'
 
 
   # Example of regular route:
