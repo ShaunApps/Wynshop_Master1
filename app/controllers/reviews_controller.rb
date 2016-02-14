@@ -19,6 +19,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+    # @product = Product.find(params[:product_id])
   end
 
   # POST /reviews
@@ -36,6 +37,21 @@ class ReviewsController < ApplicationController
       end
     end
   end
+
+
+
+  # we could use the below code instead of what's directly above 
+
+  # if @review.valid?
+  #   @review.save
+  #   render @review
+  # else
+  #   render :edit
+  # end
+
+
+
+
 
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json

@@ -3,4 +3,4 @@
 <%= render 'form' %>
 
 <%= link_to 'See Details', @review %> |
-<%= link_to 'Go Back', products_path %>
+<%= link_to 'Go Back', product_path(@review.product) %>
