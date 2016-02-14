@@ -32,7 +32,7 @@ class ReviewsController < ApplicationController
         format.html { redirect_to @review, notice: 'Review was successfully created.' }
         format.json { render :show, status: :created, location: @review }
       else
-        format.html { render :new }
+        format.html { render :edit } #changed :new to :edit, but need to get rid of 'see details'
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end
@@ -40,7 +40,7 @@ class ReviewsController < ApplicationController
 
 
 
-  # we could use the below code instead of what's directly above 
+  # we could use the below code instead of what's directly above
 
   # if @review.valid?
   #   @review.save
