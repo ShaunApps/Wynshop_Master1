@@ -14,28 +14,46 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
+    #@review = Review.new
+    @review = current_user.reviews.build
   end
 
   # GET /reviews/1/edit
   def edit
+    # @product = Product.find(params[:product_id])
   end
 
   # POST /reviews
   # POST /reviews.json
   def create
     @review = Review.new(review_params)
+    @review.user_id = current_user.id
 
     respond_to do |format|
       if @review.save
         format.html { redirect_to @review, notice: 'Review was successfully created.' }
         format.json { render :show, status: :created, location: @review }
       else
-        format.html { render :new }
+        format.html { render :edit } #changed :new to :edit, but need to get rid of 'see d'
         format.json { render json: @review.errors, status: :unprocessable_entity }
       end
     end
   end
+
+
+
+  # we could use the below code instead of what's directly above
+
+  # if @review.valid?
+  #   @review.save
+  #   render @review
+  # else
+  #   render :edit
+  # end
+
+
+
+
 
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json
@@ -69,6 +87,6 @@ class ReviewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def review_params
-      params.require(:review).permit(:comment, :product_id)
+      params.require(:review).permit(:comment, :product_id, :user_id)
     end
 end
