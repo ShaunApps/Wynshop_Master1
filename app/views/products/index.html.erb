@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Products</h1>
+<h1>All Wynshop Products</h1>
 
 <table>
   <thead>
@@ -19,12 +19,16 @@
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.formatted_price %></td>
-        <td><%= product.image %></td>
-        <td><%= link_to 'Show', product %></td>
+         <td><%= image_tag("shirt1.jpg", :alt => "wyncode-shirt") %><td>
+        <td><%= link_to 'See Details', product %></td>
 
       </tr>
     <% end %>
   </tbody>
 </table>
+
+<br>
+<%= link_to 'Home Page', root_path %>
+<%= link_to 'Contact Us', contact_path %>
 
 <br>
