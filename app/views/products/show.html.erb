@@ -29,16 +29,14 @@
   </p>
 
   <p>
-    <strong>Price:</strong>
-    <%= @product.formatted_price %>
+  <h1>Price: <%= @product.formatted_price %></h1>
   </p>
 
-  <p>
-    <strong>Image:</strong>
-    <%= @product.image %>
-  </p>
 
-  <h3>Reviews</h3>
+<%= link_to image_tag(@product.image.url,:size => "200x220"), @product.image.url %>
+
+
+  <p><%= @product.name %> Reviews</p>
   <% @product.reviews.each do |review| %>
     <p>
       <%= review.comment %>
@@ -49,7 +47,6 @@
 
     <h3>Add a Review</h3>
   <%= render 'reviews/form' %>
-  <li class="button_black"><%= link_to 'Go Back to Products', products_path %></li>
 </div>
 </article>
 
