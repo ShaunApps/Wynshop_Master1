@@ -50,6 +50,22 @@ color: #FFF;
 }
 
 
+
+
+
+/*this is specific to the sign up container */
+.sign_up_container {
+  max-width:400px;
+  background-color: #F9F9F9;
+	width:600px;
+	margin:0 auto;
+}
+
+
+
+
+
+/* this container is for the bottom part*/
 .log_in_container {
   max-width:400px;
   background-color: #26ADE4;
@@ -57,6 +73,10 @@ color: #FFF;
 	margin:0 auto;
 
 }
+
+
+
+
 
 .log_in_thing_color {
   color: #26ADE4;
