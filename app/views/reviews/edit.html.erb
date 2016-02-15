@@ -1,6 +1,36 @@
-<h1>Editing Review</h1>
+<nav class="top-navigation">
+   <ul class="links">
+     <li>Signed in as Admin</li>
+     <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
+     <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+     <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+   </ul>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+</nav>
 
-<%= render 'form' %>
 
-<%= link_to 'See Details', @review %> |
-<%= link_to 'Go Back', product_path(@review.product) %>
+<body>
+
+<header><h2>&lt;Wynshop Admin Edit Review&gt;</h2></header>
+
+<article class='article_admin'>
+
+  <h1>Editing Review</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'See Details', @review %> |
+  <%= link_to 'Go Back', product_path(@review.product) %>
+
+
+
+</article>
+
+<footer>
+  <div class="footer_menu">
+  <h3>&lt;Wynshop Products&gt;</h3>
+  <p>All Rights reserved to: Team 6</p>
+</div>
+</footer>
+</body>

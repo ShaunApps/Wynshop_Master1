@@ -1,20 +1,53 @@
-<p id="notice"><%= notice %></p>
+<nav class="top-navigation">
+   <ul class="links">
+     <li>Signed in as Admin</li>
+     <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
+     <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+     <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+   </ul>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+</nav>
 
-<p>
-  <strong>Comment:</strong>
-  <%= @review.comment %>
-</p>
 
-<p>
-  <strong>Product:</strong>
-  <%= @review.product.name %>
-</p>
+<body>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
+<header><h2>&lt;Wynshop Admin Reviews Page&gt;</h2></header>
 
-<% if @review.product.nil? %>
-  <%= link_to 'Back', reviews_path %>
+<article class='article_admin'>
 
-<% else %>
-  <%= link_to 'Back', @review.product %>
-<% end %>
+  <p id="notice"><%= notice %></p>
+
+
+  <p>
+    <strong>Product:</strong>
+    <%= @review.product.name %>
+  </p>
+  
+  <p>
+    <strong>Comment:</strong>
+    <%= @review.comment %>
+  </p>
+
+
+
+  <%= link_to 'Edit', edit_review_path(@review) %> |
+
+  <% if @review.product.nil? %>
+    <%= link_to 'Back', reviews_path %>
+
+  <% else %>
+    <%= link_to 'Back', @review.product %>
+  <% end %>
+
+
+
+</article>
+
+<footer>
+  <div class="footer_menu">
+  <h3>&lt;Wynshop Products&gt;</h3>
+  <p>All Rights reserved to: Team 6</p>
+</div>
+</footer>
+</body>
