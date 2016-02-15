@@ -27,7 +27,8 @@ div.field, div.actions {
 
 
 #notice {
-  color: #D1E751;
+  color: #000;
+  text-align: center;
 }
 
 .field_with_errors {

@@ -27,11 +27,11 @@ header, footer {
 
 article {
   padding: 50px;
-  background: #eeeeee; /*light gray*/
+  background: #eeeeee; /*light blue*/
 }
 
 
-/*Media Stuff Don't Touch Please :) */
+/*Responsive Stuff Don't Touch Please :) */
 
 @media all and (max-width: 640px) {
 
