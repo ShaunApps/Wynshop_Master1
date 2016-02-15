@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: #26ADE4;
+}
+
 h2 {
 font-family: 'Open Sans', sans-serif;
 font-weight: 400;
@@ -34,6 +38,41 @@ li {
   padding-left: 0;
 }
 
+ul {
+  padding-left: 0;
+}
+
+header {
+  display: block;
+  padding: 50px;
+  background: #eeeeee;
+  min-height: 200px;
+  background: #000000;
+}
+
+footer {
+  display: block;
+  padding: 50px;
+  background: #eeeeee;
+  min-height: 100px;
+  background: #000000;
+}
+
+footer p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #9a9a9a;
+  font-weight: 300;
+}
+
+
+article {
+  padding: 50px;
+  background: #26ADE4; /*blue*/
+}
+
+/*_______________________Navigations Styling  */
+
 
 .links li {
 display: inline-block;
@@ -56,23 +95,6 @@ margin-right: 50px;
   float: right;
 }
 
-.product_name {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 22px;
-  list-style: none;
-}
-
-.product_price {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000;
-  font-size: 16px;
-  list-style: none;
-}
 
 .button_blue a {
   font-family: 'Roboto Condensed', sans-serif;
@@ -119,43 +141,19 @@ margin-right: 50px;
   border-radius: 5px;
 }
 
-ul {
-  padding-left: 0;
-}
-
-
-h1 {
-  color: #26ADE4;
-}
-
-
-header {
-  display: block;
-  padding: 50px;
-  background: #eeeeee; /*light gray*/
-  min-height: 200px;
-  background: #000000;
-}
-
-footer {
-  display: block;
-  padding: 50px;
-  background: #eeeeee; /*light gray*/
-  min-height: 100px;
-  background: #000000;
-}
-
-footer p {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  color: #9a9a9a;  /*gra*/
-  font-weight: 300;
-}
-
-
-article {
-  padding: 50px;
-  background: #26ADE4; /*blue*/
+.home_button a {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight:600;
+  text-transform: uppercase;
+  background-color: #26ADE4;
+  border: none;
+  color: #000;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .products-block {
@@ -179,8 +177,59 @@ article {
   font-size: 18px;
 }
 
+.product_name {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 22px;
+  list-style: none;
+}
 
-/*Media Stuff Don't Touch Please :) */
+.product_price {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  list-style: none;
+}
+
+/*_______________________Show, Products Details Page Styling  */
+
+.show_container {
+  margin-left: auto;
+  margin-right: auto;
+  width:900px;
+  height: 700px;
+  background: #F9F9F9;
+  color: white;
+  padding: 50px;
+  font-size: 16px;
+}
+
+.show_container h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+	color: #26ADE4;
+	display: block;
+	font-size: 30px;
+	font-weight: 700;
+  text-transform: uppercase;
+}
+
+.show_container p {
+  font-family: 'Roboto Condensed', sans-serif;
+	color: #26ADE4;
+	display: block;
+	font-size: 30px;
+	font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+/*_______________________Media Stuff Don't Touch Please :) */
 
 @media all and (max-width: 640px) {
 

@@ -1,37 +1,62 @@
-<p id="notice"><%= notice %></p>
+<nav class="top-navigation">
+    <ul class="links">
+      <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+      <li class="button_black"><%= link_to 'Sign Up', new_user_registration_path %></li>
+      <li class="button_black"><%= link_to 'Sign In', new_user_session_path %></li>
+      <li class="button_black"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+        <li class="button_black"><%= link_to 'Go Back to Products', products_path %></li>
+      <li class="home_button"><%= link_to 'Home Page', root_path %></li>
+    </ul>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+</nav>
 
-<h1>
-  <%= @product.name %>
-</h1>
+<body>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+<header><h2>Details for: <%= @product.name %></h2></header>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.formatted_price %>
-</p>
+<article>
+<div class="show_container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @product.image %>
-</p>
+  <h1>
+    <%= @product.name %>
+  </h1>
 
-<h3>Reviews</h3>
-<% @product.reviews.each do |review| %>
   <p>
-    <%= review.comment %>
-    <br>
-    Added on: <%= review.created_at %>
+    <strong>Description:</strong>
+    <%= @product.description %>
   </p>
-<% end %>
 
-  <h3>Add a Review</h3>
-<%= render 'reviews/form' %>
+  <p>
+    <strong>Price:</strong>
+    <%= @product.formatted_price %>
+  </p>
 
+  <p>
+    <strong>Image:</strong>
+    <%= @product.image %>
+  </p>
 
-<!--
-<%= link_to 'Edit', edit_product_path(@product) %> | -->
-<%= link_to 'Go Back to Products', products_path %>
+  <h3>Reviews</h3>
+  <% @product.reviews.each do |review| %>
+    <p>
+      <%= review.comment %>
+      <br>
+      Added on: <%= review.created_at %>
+    </p>
+  <% end %>
+
+    <h3>Add a Review</h3>
+  <%= render 'reviews/form' %>
+  <li class="button_black"><%= link_to 'Go Back to Products', products_path %></li>
+</div>
+</article>
+
+<footer>
+  <div class="footer_menu">
+  <h3>&lt;Wynshop Products&gt;</h3>
+  <p>All Rights reserved to: Team 6</p>
+</div>
+</footer>
+</body>
