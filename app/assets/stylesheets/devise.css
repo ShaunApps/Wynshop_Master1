@@ -44,8 +44,22 @@ color: #FFF;
 
 .container {
 	max-width:400px;
+  background-color: #F9F9F9;
 	width:600px;
 	margin:0 auto;
+}
+
+
+.log_in_container {
+  max-width:400px;
+  background-color: #26ADE4;
+	width:600px;
+	margin:0 auto;
+
+}
+
+.log_in_thing_color {
+  color: #26ADE4;
 }
 
 /*#signin_contact_template input[type="text"], #signin_contact_template input[type="email"], #signin_contact_template input[type="tel"],  #signin_contact_template textarea, #signin_contact_template button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }*/
