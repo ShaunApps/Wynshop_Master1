@@ -3,7 +3,7 @@ class Product < ActiveRecord::Base
   validates :price_in_cents, numericality: {only_integer: true, greater_than: 0}
   has_many :reviews #might not be needed
 
-  has_attached_file :image, styles: {medium: "300x300", thumb: "100x100"}, default_url: "/images/:styles/missing.png"
+  has_attached_file :image, styles: {medium: "150x150", thumb: "100x100"}, default_url: "/images/:styles/missing.png"
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 

@@ -11,3 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+dir_to_ignore/public/system/products/images

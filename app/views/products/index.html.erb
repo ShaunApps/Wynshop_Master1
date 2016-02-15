@@ -1,9 +1,13 @@
-
 <nav class="top-navigation">
     <ul class="links">
+      <li class="button_black"><%= link_to 'Sign Up', new_user_registration_path %></li>
+      <li class="button_black"><%= link_to 'Sign In', new_user_session_path %></li>
+      <li class="button_black"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
       <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
       <li class="button_black"><%= link_to 'Home Page', root_path %></li>
     </ul>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 </nav>
 
 <body>
@@ -18,13 +22,13 @@
       <ul>
         <li class="product_name"><%= product.name %></li>
         <li><%= product.description %></li>
-        <li class="product_price">
+        <!-- <li class="product_price">
           <p>
             <strong>Price:$</strong>
             <%= product.formatted_price %>
           </p>
-        </li>
-        <li><%= link_to image_tag(product.image.url(:medium)), product.image.url %></li>
+        </li> -->
+        <li><%= link_to image_tag(product.image.url,:size => "180x220"), product.image.url %></li>
       </li>
         <li class="button_blue"><%= link_to 'See Details', product %></li>
       </ul>
