@@ -18,7 +18,9 @@
 <article>
 
 
-  <div class="signin_inner_box">
+  <div class="container">
+    <div id="contact">
+      <!-- this 'id=contact' is disabled. enabling with the respective 'id=signin_contact_template' css causes the 'container' to go away. -->
 
   <h1>Log in</h1>
 
@@ -48,9 +50,20 @@
   <% end %>
 
 
-  <%= render "devise/shared/links" %>
+
 
 </div>
+
+</div>
+
+
+<div class="log_in_container">
+  <%= render "devise/shared/links" %>
+</div>
+
+
+
+
 
 </article>
 

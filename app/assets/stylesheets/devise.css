@@ -28,3 +28,134 @@
   padding-right: auto;
 
 }
+
+
+
+* {
+	/*margin:0;
+	padding:0;*/
+	box-sizing:border-box;
+}
+
+a {
+text-decoration: none;
+color: #FFF;
+}
+
+.container {
+	max-width:400px;
+  background-color: #F9F9F9;
+	width:600px;
+	margin:0 auto;
+}
+
+
+
+
+
+/*this is specific to the sign up container ------not needed */
+.sign_up_container {
+  max-width:400px;
+  background-color: #F9F9F9;
+	width:600px;
+	margin:0 auto;
+}
+
+
+
+
+
+/* this container is for the bottom part*/
+.log_in_container {
+  max-width:400px;
+  background-color: #26ADE4;
+	width:600px;
+	margin:0 auto;
+
+}
+
+
+
+
+
+.log_in_thing_color {
+  color: #26ADE4;
+}
+
+/*#signin_contact_template input[type="text"], #signin_contact_template input[type="email"], #signin_contact_template input[type="tel"],  #signin_contact_template textarea, #signin_contact_template button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }*/
+
+
+
+#signin_contact_template h3 {
+	color: #26ADE4;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#signin_contact_template input[type="text"], #signin_contact_template input[type="email"], #signin_contact_template input[type="tel"], #signin_contact_template textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#signin_contact_template input[type="text"]:hover, #signin_contact_template input[type="email"]:hover, #signin_contact_template input[type="tel"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#signin_contact_template textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#signin_contact_template button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#0CF;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#signin_contact_template button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#signin_contact_template button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#signin_contact_template input:focus, #signin_contact_template textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
