@@ -198,16 +198,37 @@ margin-right: 50px;
 /*_______________________Show, Products Details Page Styling  */
 
 .show_container {
+  width:900px;
+  height: 600px;
+  background: #F9F9F9;
+  padding-top: 50px;
   margin-left: auto;
   margin-right: auto;
-  width:900px;
-  height: 700px;
-  background: #F9F9F9;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.review_container {
+  margin-left: auto;
+  margin-right: auto;
+  width:200px;
+  height: 250px;
+  background: #26ADE4;
+  padding-top: 25px;
+}
+
+.show_content {
+  width:300px;
+  height: 500px;
   color: white;
-  padding: 50px;
+  /*padding: 30px;*/
   font-size: 16px;
   text-align: center;
 }
+
 
 .show_container h1 {
   font-family: 'Roboto Condensed', sans-serif;
@@ -220,7 +241,7 @@ margin-right: 50px;
 
 .show_container h3 {
   font-family: 'Roboto Condensed', sans-serif;
-	color: #26ADE4
+	color: #26ADE4;
 	display: block;
 	font-size: 20px;
 	font-weight: 700;
