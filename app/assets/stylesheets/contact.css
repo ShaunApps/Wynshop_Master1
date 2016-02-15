@@ -9,10 +9,48 @@ text-decoration: none;
 color: #FFF;
 }
 
+.titles {
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0px;
+	color: #26ADE4;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+}
+
 .container {
+	padding: 0;
 	max-width:400px;
-	width:600px;
+	width:300px;
 	margin:0 auto;
+}
+
+.container_right {
+  background: #F9F9F9;
+	width:300px;
+	padding-top: 100px;
+	max-width:400px;
+	height: 300px;
+	margin:0 auto;
+}
+
+.main_container {
+  width:900px;
+  height: 600px;
+  background: #F9F9F9;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.teampic {
+	width: 300px;
 }
 
 #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"],  #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
@@ -24,6 +62,8 @@ color: #FFF;
 }
 
 #contact h3 {
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0px;
 	color: #26ADE4;
 	display: block;
 	font-size: 30px;
