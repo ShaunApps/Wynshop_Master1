@@ -16,7 +16,10 @@
 
 <article>
 
-  <div class="signin_inner_box">
+  <div class="container">
+    <form id="contact" action="" method="post">
+      <!-- this 'id=contact' is disabled. enabling with the respective 'id=signin_contact_template' css causes the 'container' to go away. -->
+
 
   <h1>Sign up</h1>
 
@@ -48,6 +51,7 @@
 
   <%= render "devise/shared/links" %>
 
+</form>
 
 </div>
 </article>
