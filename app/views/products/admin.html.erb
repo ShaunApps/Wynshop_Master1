@@ -17,7 +17,7 @@
 <article class='article_admin'>
   <p id="notice"><%= notice %></p>
   <br>
-  <%= link_to 'Create a New Product', new_product_path %>
+<%= link_to 'Create a New Product', new_product_path %>
 
   <table>
     <thead>
@@ -36,7 +36,7 @@
     <tbody>
       <% @products.each do |product| %>
         <tr>
-          <td><%= product.name %></td>
+          <td class="font_style"><%= product.name %></td>
           <td><%= product.description %></td>
           <td><%= product.formatted_price %></td>
           <td><%= link_to 'See Details', product %></td>
