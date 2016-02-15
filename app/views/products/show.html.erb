@@ -38,6 +38,12 @@
       </div>
 
       <div class="show_content">
+
+        <h3>Add a Review:</h3>
+          <div class="review_container">
+            <%= render 'reviews/form' %>
+          </div>
+          
         <h3><%= @product.name %> Reviews:</h3>
         <% @product.reviews.each do |review| %>
         <p>
@@ -47,10 +53,6 @@
         </p>
         <% end %>
 
-        <h3>Add a Review:</h3>
-          <div class="review_container">
-            <%= render 'reviews/form' %>
-          </div>
       </div>
     </div>
 

@@ -24,31 +24,15 @@
 <body>
 
 <header><h2>&lt;Welcome to Wynshop!!&gt;</h2>
-<p class="head_title">Some Nice Mini Title Goes Here</p>
+<p class="head_title">A Place for Wyncoders to Shop</p>
 </header>
 
 
-<article>
-  <p id="notice"><%= notice %></p>
-  <div class="products-block">
-    <% @products.each do |product| %>
-    <div class="product_single_box">
-      <ul>
-        <li class="product_name"><%= product.name %></li>
-        <li><%= product.description %></li>
-        <!-- <li class="product_price">
-          <p>
-            <strong>Price:$</strong>
-            <%= product.formatted_price %>
-          </p>
-        </li> -->
-        <li><%= link_to image_tag(product.image.url,:size => "180x220"), product.image.url %></li>
-      </li>
-        <li class="button_blue"><%= link_to 'See Details', product %></li>
-      </ul>
-    </div>
-    <% end %>
-  </div>
+<article class="no_padding">
+
+<div class="image">
+</div>
+
 </article>
 
 <footer>
