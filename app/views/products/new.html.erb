@@ -1,5 +1,41 @@
-<h1>New Wynshop Product</h1>
+<nav class="top-navigation">
+   <ul class="links">
+     <li>Signed in as Admin</li>
+     <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
+     <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+     <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+   </ul>
+</nav>
 
-<%= render 'form' %>
+<body>
 
-<%= link_to 'Go Back to Products', products_path %>
+<header>
+  <div class="notice_box">
+    <p class="notice_style"><%= notice %></p>
+    <p class="notice_style"><%= alert %></p>
+  </div>
+
+  <h2>&lt;New Wynshop Product&gt;</h2>
+</header>
+
+  <article>
+    <div class="new_container">
+
+      <div class="new_box">
+        <br>
+        <h1>Create New Product</h1>
+        <%= render 'form' %>
+        <br>
+        <div class="home_button"><%= link_to 'Go Back to Products', products_path %></div>
+      </div>
+    </div>
+  </article>
+
+
+<footer>
+  <div class="footer_menu">
+  <h3>&lt;Wynshop Products&gt;</h3>
+  <p>All Rights reserved to: Team 6</p>
+</div>
+</footer>
+</body>

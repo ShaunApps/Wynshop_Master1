@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'admin' => 'products#admin'
   get 'contact' => 'contact#contact'
+  get 'thanks' => 'contact#thanks'
+
 
 
 
