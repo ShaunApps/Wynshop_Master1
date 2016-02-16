@@ -12,8 +12,6 @@
       <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
       <li class="button_black"><%= link_to 'Products Page', products_path %></li>
       <li class="home_button"><%= link_to 'Home Page', root_path %></li>
-      <li class="home_button"><%= link_to 'Admin', admin_path %></li>
-
     <%end%>
   </ul>
 </nav>
@@ -67,6 +65,10 @@
           Added by: <%= review.user.email %>
           on <%= "#{review.created_at.month}-#{review.created_at.day}-#{review.created_at.year}" %>
         </div>
+        <%if user_signed_in? && review.user_id == current_user.id %>
+        <td><%= link_to 'Edit Review', edit_review_path(review) %></td>
+        <% end %>
+
 
         </p>
         <% end %>
