@@ -169,7 +169,7 @@ margin-right: 50px;
 
 .product_single_box {
   margin: 10px;
-  width:250px;
+  width:200px;
   height: 375px;
   background: #FFF;
   color: white;
@@ -228,6 +228,28 @@ margin-right: 50px;
   font-size: 16px;
   text-align: center;
 }
+
+
+
+.show_content p {
+
+  text-align: left;
+  margin-bottom: 0px;
+
+
+}
+
+
+.review_information_size {
+
+  font-size: 12px;
+  text-align: left;
+  color: #26ADE4;
+
+}
+
+
+
 
 
 .show_container h1 {
