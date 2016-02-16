@@ -1,12 +1,19 @@
 <nav class="top-navigation">
    <ul class="links">
+     <% if user_signed_in? && current_user.email == "admin@gmail.com" %>
+     <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
      <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
      <li class="button_black"><%= link_to 'Products Page', products_path %></li>
      <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+     <li class="home_button"><%= link_to 'Admin', admin_path %></li>
      <li class="sign_in_notice">Signed in as <br><%=current_user.email%></li>
+    <%else%>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+      <%end%>
    </ul>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
 </nav>
 
 
@@ -16,8 +23,8 @@
 
 <article class='article_admin'>
 
-  <p id="notice"><%= notice %></p>
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
   <table>
     <thead>
@@ -33,9 +40,9 @@
         <tr>
           <td><%= review.comment %></td>
           <td><%= review.product.name %></td>
-          <td><%= link_to 'See Your Review', review %></td>
-          <td><%= link_to 'Edit Review', edit_review_path(review) %></td>
-          <td><%= link_to 'Delete Review', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="mini_button_blue"><%= link_to 'See Your Review', review %></td>
+          <td class="mini_button_blue"><%= link_to 'Edit Review', edit_review_path(review) %></td>
+          <td class="mini_button_blue"><%= link_to 'Delete Review', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>

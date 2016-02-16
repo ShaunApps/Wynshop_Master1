@@ -1,9 +1,9 @@
 <nav class="top-navigation">
    <ul class="links">
-     <li>Signed in as Admin</li>
      <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
      <li class="button_black"><%= link_to 'Products Page', products_path %></li>
      <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+     <li class="sign_in_notice">Signed in as <br><%=current_user.email%></li>
    </ul>
 </nav>
 
@@ -26,7 +26,7 @@
         <h1>Create New Product</h1>
         <%= render 'form' %>
         <br>
-        <div class="home_button"><%= link_to 'Go Back to Products', products_path %></div>
+        <!-- <div class="home_button"><%= link_to 'Go Back to Products', products_path %></div> -->
       </div>
     </div>
   </article>

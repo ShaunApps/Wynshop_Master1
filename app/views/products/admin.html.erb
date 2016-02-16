@@ -1,5 +1,6 @@
 <nav class="top-navigation">
    <ul class="links">
+     <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
      <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
      <li class="button_black"><%= link_to 'Products Page', products_path %></li>
      <li class="button_black"><%= link_to 'Home Page', root_path %></li>
@@ -16,44 +17,37 @@
     <p class="notice_style"><%= alert %></p>
   </div>
   <h2>&lt;Welcome Wynshop Admin&gt;</h2>
+  <div class="create_button"><%= link_to 'Create a New Product', new_product_path %></div>
+
 </header>
 
 <article class='article_admin'>
   <p id="notice"><%= notice %></p>
   <br>
-<%= link_to 'Create a New Product', new_product_path %>
-
-  <table>
-    <thead>
-      <tr>
-
+  <table class="table_class">
+      <tr class="add_line">
         <th>Name</th>
         <th>Description</th>
         <th>Price</th>
         <th>Image</th>
         <th>Update</th>
         <th>Delete</th>
-
       </tr>
     </thead>
 
     <tbody>
       <% @products.each do |product| %>
         <tr>
-          <td class="font_style"><%= product.name %></td>
+          <td class="product_name_admin"><%= product.name %></td>
           <td><%= product.description %></td>
           <td><%= product.formatted_price %></td>
-          <td><%= link_to 'See Details', product %></td>
-          <td><%= link_to 'Edit Product', edit_product_path(product) %></td>
-          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="mini_button_blue"><%= link_to 'Details', product %></td>
+          <td class="mini_button_blue"><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td class="mini_button_blue"><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
-
-
-
 
 </article>
 

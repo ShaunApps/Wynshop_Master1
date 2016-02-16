@@ -13,7 +13,6 @@
       <li class="button_black"><%= link_to 'Products Page', products_path %></li>
       <li class="home_button"><%= link_to 'Home Page', root_path %></li>
       <li class="home_button"><%= link_to 'Admin', admin_path %></li>
-
     <%end%>
   </ul>
 </nav>
@@ -48,8 +47,10 @@
         </p>
 
         <%= link_to image_tag(@product.image.url,:size => "200x220"), @product.image.url %>
-        <div class="home_button"><%= link_to 'BUY NOW', products_path %></div>
-
+        <br>
+        <br>
+        <!-- <div class="home_button"><%= link_to 'BUY NOW', products_path %></div> -->
+        <a class="home_button" href="http://eshop.macsales.com/item/Newer%20Technology/NGSMBPR15RD/?utm_source=google&utm_medium=shoppingengine&utm_campaign=googlebase&gclid=COqXuMep_coCFQpbhgod5s4C5w">BUY NOW</a>
       </div>
 
       <div class="show_content">
