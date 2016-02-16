@@ -5,14 +5,18 @@
      <li class="button_black"><%= link_to 'Products Page', products_path %></li>
      <li class="button_black"><%= link_to 'Home Page', root_path %></li>
    </ul>
-   <p class="notice"><%= notice %></p>
-   <p class="alert"><%= alert %></p>
 </nav>
 
 
 <body>
 
-<header><h2>&lt;Wynshop Admin Reviews Page&gt;</h2></header>
+<header>
+  <div class="notice_box">
+    <p class="notice_style"><%= notice %></p>
+    <p class="notice_style"><%= alert %></p>
+  </div>
+  <h2>&lt;Wynshop Admin Reviews Page&gt;</h2>
+</header>
 
 <article class='article_admin'>
 
@@ -23,7 +27,7 @@
     <strong>Product:</strong>
     <%= @review.product.name %>
   </p>
-  
+
   <p>
     <strong>Comment:</strong>
     <%= @review.comment %>
