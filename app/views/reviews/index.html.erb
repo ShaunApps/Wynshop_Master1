@@ -1,9 +1,9 @@
 <nav class="top-navigation">
    <ul class="links">
-     <li>Signed in as Admin</li>
      <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
      <li class="button_black"><%= link_to 'Products Page', products_path %></li>
      <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+     <li class="sign_in_notice">Signed in as <br><%=current_user.email%></li>
    </ul>
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
