@@ -66,6 +66,12 @@
           <div class="review_information_size">
           Added by: <%= review.user.email %>
           on <%= "#{review.created_at.month}-#{review.created_at.day}-#{review.created_at.year}" %>
+          <%if user_signed_in? && review.user_id == current_user.id %>
+          <td><%= link_to 'Edit Review', edit_review_path(review) %></td>
+          <td><%= link_to 'Delete Review', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+
+    
         </div>
         <%if user_signed_in? && review.user_id == current_user.id %>
         <td><%= link_to 'Edit Review', edit_review_path(review) %></td>
