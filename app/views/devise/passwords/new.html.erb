@@ -1,0 +1,63 @@
+<nav class="top-navigation">
+  <ul class="links">
+    <% if user_signed_in? %>
+      <li>Signed in as <%=current_user.email%></li>
+      <li class="button_black"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+      <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+       <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+       <li class="home_button"><%= link_to 'Home Page', root_path %></li>
+      <%else%>
+      <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+      <li class="button_black"><%= link_to 'Sign In', new_user_session_path %></li>
+       <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+      <li class="home_button"><%= link_to 'Home Page', root_path %></li>
+    <%end%>
+  </ul>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</nav>
+
+<body>
+
+
+<article>
+
+<div class="container">
+  <div id="contact" action="" method="post">
+
+<h1>Forgot your password?</h1>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Send me reset password instructions" %>
+  </div>
+<% end %>
+
+
+
+</div>
+</div>
+
+
+<div class="forgot_special_log_in_container">
+  <p>  </p>
+</div>
+
+</article>
+
+
+
+<footer>
+  <div class="footer_menu">
+  <h3></h3>
+  <p>All Rights reserved to: Team 6</p>
+</div>
+</footer>
+</body>

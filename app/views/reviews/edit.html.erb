@@ -1,6 +1,43 @@
-<h1>Editing Review</h1>
+<nav class="top-navigation">
+  <ul class="links">
+    <% if user_signed_in? && current_user.email == "admin@gmail.com" %>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+    <li class="home_button"><%= link_to 'Admin', admin_path %></li>
+    <li class="sign_in_notice">Signed in as <br><%=current_user.email%></li>
+    <%else%>
+        <li class="button_black"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+      <%end%>
+  </ul>
+</nav>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @review %> |
-<%= link_to 'Back', reviews_path %>
+<body>
+
+<header><h2>&lt;Wynshop Edit Review&gt;</h2></header>
+
+<article class='article_admin'>
+
+  <h1>Editing Review</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'See Details', @review %> |
+  <%= link_to 'Go Back', product_path(@review.product) %>
+
+
+
+</article>
+
+<footer>
+  <div class="footer_menu">
+  <h3>&lt;Wynshop Products&gt;</h3>
+  <p>All Rights reserved to: Team 6</p>
+</div>
+</footer>
+</body>

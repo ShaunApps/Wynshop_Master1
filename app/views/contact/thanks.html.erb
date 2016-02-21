@@ -1,0 +1,47 @@
+<nav class="top-navigation">
+  <ul class="links">
+    <% if user_signed_in? %>
+    <li class="button_black"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="home_button"><%= link_to 'Home Page', root_path %></li>
+    <li class="sign_in_notice">Signed in as <br><%=current_user.email%></li>
+    <%else%>
+    <li class="button_black"><%= link_to 'Sign In', new_user_session_path %></li>
+    <li class="button_black"><%= link_to 'Sign Up', new_user_registration_path %></li>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="home_button"><%= link_to 'Home Page', root_path %></li>
+    <%end%>
+  </ul>
+</nav>
+
+<body>
+
+  <!-- <header>
+    <div class="notice_box">
+      <p class="notice_style"><%= notice %></p>
+      <p class="notice_style"><%= alert %></p>
+    </div>
+    <h2>&lt;Contact Wynshop&gt;</h2>
+  </header> -->
+
+  <article>
+    <div class="thanks_container">
+
+      <div class="container">
+        <form id="contact" action="" method="post">
+          <h4>Your message was sent successfully!</h4>
+          <%=image_tag("thankyou.png", class:"thanks") %>
+          <h4>One of us will get back to you shortly.</h4>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <div class="footer_menu">
+      <h3>&lt;Wynshop Products&gt;</h3>
+      <p>All Rights reserved to: Team 6</p>
+    </div>
+  </footer>
+</body>

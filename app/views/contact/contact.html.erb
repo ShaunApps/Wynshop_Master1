@@ -1,0 +1,67 @@
+<nav class="top-navigation">
+  <ul class="links">
+    <% if user_signed_in? %>
+    <li class="button_black"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="home_button"><%= link_to 'Home Page', root_path %></li>
+    <li class="sign_in_notice">Signed in as <br><%=current_user.email%></li>
+    <%else%>
+    <li class="button_black"><%= link_to 'Sign In', new_user_session_path %></li>
+    <li class="button_black"><%= link_to 'Sign Up', new_user_registration_path %></li>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="home_button"><%= link_to 'Home Page', root_path %></li>
+    <%end%>
+  </ul>
+</nav>
+
+<body>
+
+  <header>
+    <div class="notice_box">
+      <p class="notice_style"><%= notice %></p>
+      <p class="notice_style"><%= alert %></p>
+    </div>
+    <h2>&lt;Contact Wynshop&gt;</h2>
+  </header>
+
+  <article>
+    <div class="main_container">
+
+      <div class="container_right">
+        <%=image_tag("team.jpg", class:"teampic") %>
+        <h3 class="titles">Meet the Team!</h3>
+      </div>
+
+      <div class="container">
+        <form id="contact" action="" method="post">
+          <h3 class="titles">Contact Us</h3>
+          <h4>Contact us today, and get reply within 24 hours!</h4>
+          <fieldset>
+            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Your Phone Number" type="tel" tabindex="3" required>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <a class="home_button" href="http://localhost:3000/thanks">SEND MESSAGE</a>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <div class="footer_menu">
+      <h3>&lt;Wynshop Products&gt;</h3>
+      <p>All Rights reserved to: Team 6</p>
+    </div>
+  </footer>
+</body>

@@ -1,29 +1,61 @@
-<p id="notice"><%= notice %></p>
+<nav class="top-navigation">
+   <ul class="links">
+     <% if user_signed_in? && current_user.email == "admin@gmail.com" %>
+     <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+     <li class="button_black"><%= link_to 'Reviews Page', reviews_path %></li>
+     <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+     <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+     <li class="home_button"><%= link_to 'Admin', admin_path %></li>
+     <li class="sign_in_notice">Signed in as <br><%=current_user.email%></li>
+    <%else%>
+        <li class="button_black"><%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %></li>
+    <li class="button_black"><%= link_to 'Contact Us', contact_path %></li>
+    <li class="button_black"><%= link_to 'Products Page', products_path %></li>
+    <li class="button_black"><%= link_to 'Home Page', root_path %></li>
+      <%end%>
+   </ul>
+</nav>
 
-<h1>Listing Reviews</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Comment</th>
-      <th>Product</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<body>
 
-  <tbody>
-    <% @reviews.each do |review| %>
+<header><h2>&lt;Wynshop Reviews Page&gt;</h2></header>
+
+<article class='article_admin'>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <table>
+    <thead>
       <tr>
-        <td><%= review.comment %></td>
-        <td><%= review.product %></td>
-        <td><%= link_to 'Show', review %></td>
-        <td><%= link_to 'Edit', edit_review_path(review) %></td>
-        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Comment</th>
+        <th>Product</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.comment %></td>
+          <td><%= review.product.name %></td>
+          <td class="mini_button_blue"><%= link_to 'See Your Review', review %></td>
+          <td class="mini_button_blue"><%= link_to 'Edit Review', edit_review_path(review) %></td>
+          <td class="mini_button_blue"><%= link_to 'Delete Review', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Review', new_review_path %>
+
+
+</article>
+
+<footer>
+  <div class="footer_menu">
+  <h3>&lt;Wynshop Products&gt;</h3>
+  <p>All Rights reserved to: Team 6</p>
+</div>
+</footer>
+</body>
